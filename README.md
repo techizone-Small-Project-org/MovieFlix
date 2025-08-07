@@ -4,6 +4,8 @@
 ```
 sudo yum update -y
 sudo yum install git nginx -y
+sudo systemctl enable nginx
+sudo systemctl start nginx
 ```
 # Setup Project
 
@@ -62,5 +64,16 @@ In nginx.conf file we need to mention the alias of the songs, movies, games
 We  already have "nginx.conf" file so Copy that file in the Nginx PATH "/etc/nginx/nginx.conf"
 
 ```
+sudo mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.bak
+sudo cp /usr/share/nginx/html/nginx.conf /etc/nginx/nginx.conf
+sudo systemctl restart nginx
+```
 
+## Check your App Working or Not
+
+```
+http://<Public-IP>/  ==> it will show Homepage
+http://<Public-IP>/songs  ==> it will show Songs Page
+http://<Public-IP>/movies  ==> it will show Movies page
+http://<Public-IP>/games  ==> it will show Games page)
 ```
