@@ -1,7 +1,7 @@
 # Launch Infra for Movieflix Micrroservices
 
 ```
-Launch 3 "te.micro" Ec2 Instances 
+Launch 3 "t2.micro" Ec2 Instances 
 ```
 
 # Install Nginx
