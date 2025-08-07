@@ -65,10 +65,9 @@ http://<Public-IP>/songs  ==> it will show Songs Page
 http://<Public-IP>/movies  ==> it will show Movies page
 http://<Public-IP>/games  ==> it will show Games page
 ```
-# Here we use "Reverse Proxy" Concept
-## To achieve these we need to configure the "nginx.conf" file
+# Here we use "Reverse Proxy" Concept To achieve
 
-In nginx.conf file we need to mention the alias of the songs, movies, games
+In nginx.conf file we need to mention the proxy_pass of the songs, movies, games
 
 ```
     location /movies/ {
@@ -92,15 +91,15 @@ We  already have "nginx.conf" file so Copy that file in the Nginx PATH "/etc/ngi
 
 ```
 sudo mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.bak
-sudo vim 
+sudo cp /usr/share/nginx/html/nginx.conf /etc/nginx/nginx.conf
 sudo systemctl restart nginx
 ```
 
 ## Check your App Working or Not
 
 ```
-http://<Public-IP>/  ==> it will show Homepage
-http://<Public-IP>/songs  ==> it will show Songs Page
-http://<Public-IP>/movies  ==> it will show Movies page
-http://<Public-IP>/games  ==> it will show Games page)
+http://<HomePage-Public-IP>/  ==> it will show Homepage
+http://<HomePage-Public-IP>/songs  ==> it will show Songs Page
+http://<HomePage-Public-IP>/movies  ==> it will show Movies page
+http://<HomePage-Public-IP>/games  ==> it will show Games page
 ```
